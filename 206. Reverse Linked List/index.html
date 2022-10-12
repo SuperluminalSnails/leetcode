@@ -1,0 +1,55 @@
+<!--
+ * @Date: 2022-10-08 13:29:04
+ * @LastEditTime: 2022-10-08 13:36:06
+ * @Description: file content
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * @Date: 2022-10-08 13:23:55
+       * @LastEditTime: 2022-10-08 13:28:54
+       * @Description: file content
+       */
+      var reverseList = function (head) {
+        if (!head || !head.next) {
+          return head;
+        } else {
+          let _head = reverseList(head.next);
+          head.next.next = head;
+          head.next = null;
+          return _head;
+        }
+      };
+
+      function ListNode(val, next) {
+        this.val = val === undefined ? 0 : val;
+        this.next = next === undefined ? null : next;
+      }
+
+      function createList() {
+        const head = new ListNode(1, null);
+        let cur = null;
+        let pre = head;
+        for (let i = 2, len = 3; i <= len; i++) {
+          const curNode = new ListNode(i, null);
+          cur = curNode;
+          pre.next = cur;
+          pre = cur;
+          cur = cur.next || null;
+        }
+        return head;
+      }
+
+      const LinkedList = createList();
+      console.log(reverseList(LinkedList));
+    </script>
+  </body>
+</html>
