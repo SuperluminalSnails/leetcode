@@ -18,10 +18,9 @@ var reverseList = function (head) {
   if (!head || !head.next) {
     return head;
   } else {
-    let cur = head;
-    let next = cur.next;
-    next.next = cur;
-    cur.next = null;
-    return reverseList(head.next);
+    let _head = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return _head;
   }
 };

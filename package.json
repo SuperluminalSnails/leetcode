@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 0001/test/**/**.js"
+    "test": "jest",
+    "test1":"jest D:/code/leetcode/206. Reverse Linked List/test/sum.test.js"
   },
   "keywords": [],
   "author": "",
