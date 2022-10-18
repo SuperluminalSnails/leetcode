@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "jest": "^29.2.0",
     "mocha": "^9.0.1"
   }
 }
