@@ -1,3 +1,4 @@
+const { ListNode } = require("./list");
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -24,3 +25,5 @@ var swapPairs = function (head) {
     next.next = head;
     return next;
 }
+
+module.exports = swapPairs;

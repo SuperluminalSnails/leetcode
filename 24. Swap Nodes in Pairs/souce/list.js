@@ -17,4 +17,7 @@ function createList(arr) {
   return head;
 }
 
-module.exports = createList;
+module.exports = {
+  ListNode,
+  createList,
+};
