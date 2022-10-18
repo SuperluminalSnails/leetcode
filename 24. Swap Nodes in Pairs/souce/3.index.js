@@ -16,9 +16,12 @@ function ListNode(val, next) {
  */
 /**
  * 循环没必要一次只走一步
+ * 需要有个节点指向前node1,node2的前面节点
  */
 var swapPairs = function (head) {
-  let tmpNode = new ListNode(0, head),
+  const dummyHead = new ListNode(0);
+  dummyHead.next = head;
+  let tmpNode = dummyHead,
     node1,
     node2;
   while (tmpNode.next && tmpNode.next.next) {
@@ -29,7 +32,7 @@ var swapPairs = function (head) {
     tmpNode.next = node2;
     tmpNode = node1;
   }
-  return head.next;
+  return dummyHead.next;
 };
 
 module.exports = swapPairs;
