@@ -9,6 +9,7 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
+// 硬做法
 var swapPairs = function (head) {
   let pre = null,
     cur = head,
