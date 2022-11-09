@@ -1,5 +1,5 @@
-const dirPath = "225. Implement Stack using Queues";
+const dirPath = '703. Kth Largest Element in a Stream';
 
 module.exports = {
-  testRegex: `${dirPath}/test/.*.test.js`,
+  testRegex: `${dirPath}/test/.*.test.js`
 };
